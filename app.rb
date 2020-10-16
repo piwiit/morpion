@@ -21,13 +21,6 @@ puts '                            888                         '
 puts '                            888                         '
 puts '                            888                         '
 
-puts 'Nom du joureur 1 :'
-print '> '
-joueur1 = Player.new(gets.chomp, 'X')
-puts 'Nom du joueur 2 :'
-print '> '
-joueur2 = Player.new(gets.chomp, 'O')
-
 # class Application
 #   def perform
 #     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
@@ -35,4 +28,12 @@ joueur2 = Player.new(gets.chomp, 'O')
 #   end
 # end
 # Application.new.perform
-binding.pry
+game = Game.new
+
+tour = 0
+
+while tour < 9
+  game.turn
+  game.switch_player
+  tour += 1
+end
