@@ -32,7 +32,7 @@ game = Game.new
 
 tour = 0
 
-while tour < 9
+while tour <= 9
   game.turn
   game.switch_player
   tour += 1

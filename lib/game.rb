@@ -3,12 +3,12 @@ class Game
   # TO DO : la classe a plusieurs attr_accessor: le current_player (égal à un objet Player), le status (en cours, nul ou un objet Player s'il gagne), le Board et un array contenant les 2 joueurs.
 
   def initialize
-    # puts 'Nom du joureur 1 :'
-    # print '> '
-    joueur1 = Player.new('david the best ', ' X ')
-    # puts 'Nom du joueur 2 :'
-    # print '> '
-    joueur2 = Player.new('ugo maestro', ' O ')
+    puts 'Nom du joureur 1 :'
+    print '> '
+    joueur1 = Player.new(gets.chomp, ' X ')
+    puts 'Nom du joueur 2 :'
+    print '> '
+    joueur2 = Player.new(gets.chomp, ' O ')
 
     @board = Board.new
     @array_players = [joueur1, joueur2]
